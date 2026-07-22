@@ -1,0 +1,8 @@
+.DS_Store
+firebase-debug.log
+Homepage.html
+Post.html
+public/*.png
+screenshots/
+site-export/
+uploads/

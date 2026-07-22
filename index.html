@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amer Alić — Software engineer &amp; writer</title>
+  <meta name="description" content="Amer Alić is a software engineer writing about software, craft, work, and the age of AI.">
+  <link rel="canonical" href="https://ameralic.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Amer Alić — Software engineer &amp; writer">
+  <meta property="og:description" content="Notes on software, craft, work, and the age of AI.">
+  <meta property="og:url" content="https://ameralic.com/">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titan+One&amp;display=swap" rel="stylesheet">
+  <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="public/site.css">
+  <style>
+    /* Home-only: hero photo + title overlay */
+    .header { margin: 56px 0 72px; text-align: center; }
+    .hero-wrap { position: relative; width: 100%; margin: 0 auto; }
+    .hero {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1000 / 600;
+      margin: 0 auto;
+      overflow: hidden;
+      cursor: pointer;
+      background: transparent;
+    }
+    .hero__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 220ms ease;
+    }
+    .hero__img--happy { opacity: 0; }
+    .hero:hover .hero__img--sad { opacity: 0; }
+    .hero:hover .hero__img--happy { opacity: 1; }
+    .hero__title {
+      position: absolute;
+      left: 0; right: 0; bottom: -10px;
+      margin: 0;
+      padding: 0 12px 6px;
+      text-align: center;
+      font-family: var(--font-title);
+      font-weight: 400;
+      font-size: clamp(36px, 8vw, 72px);
+      line-height: 0.95;
+      white-space: nowrap;
+      color: #000;
+      -webkit-text-stroke: 9px #fff;
+      paint-order: stroke fill;
+      letter-spacing: 0.05em;
+      pointer-events: none;
+      user-select: none;
+      z-index: 2;
+    }
+    .hero__hint {
+      position: absolute;
+      top: 6%;
+      right: -60px;
+      width: 110px;
+      height: 130px;
+      pointer-events: none;
+      user-select: none;
+      transition: opacity 260ms ease, transform 260ms ease;
+      transform-origin: 80% 30%;
+    }
+    .hero__hint svg { width: 100%; height: 100%; color: #fff; overflow: visible; }
+    .hero__hint .hint-path {
+      stroke-dasharray: 320;
+      stroke-dashoffset: 320;
+      animation: hintDraw 2.4s ease-out 0.4s forwards, hintWiggle 3s ease-in-out 3s infinite;
+    }
+    .hero__hint .hint-head { opacity: 0; animation: hintHead 0.4s ease-out 2.4s forwards; }
+    .hero-wrap:hover .hero__hint { opacity: 0; transform: scale(0.92) translateY(-6px); }
+    @keyframes hintDraw { to { stroke-dashoffset: 0; } }
+    @keyframes hintHead { to { opacity: 1; } }
+    @keyframes hintWiggle {
+      0%, 100% { transform: rotate(0deg); }
+      40% { transform: rotate(-3deg); }
+      60% { transform: rotate(2deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero__hint .hint-path,
+      .hero__hint .hint-head { animation: none; stroke-dashoffset: 0; opacity: 1; }
+    }
+
+    .header__tagline {
+      margin: 8px auto 0;
+      max-width: 520px;
+      font-size: 20px;
+      line-height: 1.5;
+      color: var(--fg);
+    }
+    @media (max-width: 520px) {
+      .hero__hint { width: 70px; height: 84px; right: -30px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div data-site-nav></div>
+
+    <header class="header">
+      <div class="hero-wrap">
+        <div class="hero" id="hero" role="img" aria-label="Portrait of Amer Alić">
+          <img class="hero__img hero__img--sad" src="public/sadFace.webp" alt="Portrait of Amer Alić with his eyes closed" width="1200" height="680">
+          <img class="hero__img hero__img--happy" src="public/happyFace.webp" alt="" aria-hidden="true" width="1200" height="697">
+          <h1 class="hero__title">Amer Alić</h1>
+        </div>
+        <span class="hero__hint" aria-hidden="true">
+          <svg viewBox="0 0 110 130" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path class="hint-path" d="M70,28 C92,38 100,55 92,72 C86,86 70,90 60,82 C52,76 54,66 64,64 C74,62 82,72 78,84 C74,96 58,104 38,104"></path>
+            <path class="hint-head" d="M38,104 L48,98 M38,104 L46,112"></path>
+          </svg>
+        </span>
+      </div>
+      <audio id="hero-sound" src="public/swoosh.mp3" preload="auto"></audio>
+
+      <p class="header__tagline">
+        Software engineer &amp; writer. I build for the web and think about what makes work worth doing.
+      </p>
+    </header>
+
+    <section class="prose" aria-labelledby="about-title">
+      <div class="section__head">
+        <h2 class="section__title" id="about-title">About</h2>
+        <span class="section__meta"><a href="About.html">More &rarr;</a></span>
+      </div>
+      <p>
+        Hi, I&rsquo;m Amer, a software engineer from Zenica, Bosnia and Herzegovina. I care
+        about thoughtful software, clear ideas, and work that creates something genuinely useful.
+      </p>
+      <p>
+        This is where I publish what I am learning &mdash; about building products, developing
+        judgment, and staying useful as the tools around us change.
+      </p>
+    </section>
+
+    <section aria-labelledby="writing-title">
+      <div class="section__head">
+        <h2 class="section__title" id="writing-title">Writing</h2>
+        <span class="section__meta"><a href="Blog.html">All posts &rarr;</a></span>
+      </div>
+      <ul class="list">
+        <li>
+          <span class="list__title"><a href="work-that-matters-in-the-age-of-ai.html">What Makes Work Valuable in the Age of AI?</a></span>
+          <span class="list__meta">Jul 22, 2026</span>
+          <p class="list__desc">As routine work becomes easier to automate, judgment, creativity, responsibility, and visible proof of skill matter more.</p>
+        </li>
+      </ul>
+    </section>
+
+    <div data-site-footer></div>
+  </div>
+
+  <script src="public/site.js"></script>
+  <script>
+    (function () {
+      var hero = document.getElementById('hero');
+      var sound = document.getElementById('hero-sound');
+      if (!hero || !sound) return;
+      hero.addEventListener('mouseenter', function () {
+        try {
+          sound.currentTime = 0;
+          sound.volume = 0.55;
+          var p = sound.play();
+          if (p && typeof p.catch === 'function') p.catch(function () {});
+        } catch (e) {}
+      });
+    })();
+  </script>
+</body>
+</html>
