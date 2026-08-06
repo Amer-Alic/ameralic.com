@@ -1,0 +1,17 @@
+{
+  "name": "ameralic-com",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Source for ameralic.com \u2014 plain static HTML, generated from Markdown.",
+  "type": "module",
+  "scripts": {
+    "render": "node render.js",
+    "new": "node new.js",
+    "publish": "node publish.js",
+    "check": "node render.js --check",
+    "studio": "node studio.js"
+  },
+  "devDependencies": {
+    "marked": "^15.0.0"
+  }
+}

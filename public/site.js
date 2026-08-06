@@ -3,9 +3,13 @@
 (function () {
   var path = window.location.pathname.replace(/\/index\.html$/, '/').toLowerCase();
 
+  // Generated pages declare their own section, so individual post slugs never
+  // have to be listed here. Hand-written pages still fall back to the path.
   function isCurrent(match) {
+    var body = document.body;
+    var section = body ? (body.getAttribute('data-section') || '').toLowerCase() : '';
+    if (section) return section === match;
     if (match === '/') return path === '/' || path.endsWith('/homepage.html');
-    if (match === 'writing') return path.indexOf('blog') !== -1 || path.indexOf('work-that-matters') !== -1;
     return path.indexOf(match) !== -1;
   }
 

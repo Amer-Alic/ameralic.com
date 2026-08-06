@@ -1,8 +1,13 @@
 .DS_Store
 firebase-debug.log
-Homepage.html
-Post.html
+/Homepage.html
+/Post.html
 public/*.png
 screenshots/
 site-export/
 uploads/
+node_modules/
+automation/build/
+automation/last-*.log
+automation/launchd-*.err
+inbox/

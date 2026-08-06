@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}} &middot; Amer Alić</title>
+  <meta name="description" content="{{summary}}">
+  <meta name="author" content="Amer Alić">
+  <link rel="canonical" href="{{url}}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{summary}}">
+  <meta property="og:url" content="{{url}}">
+  <meta property="og:site_name" content="Amer Alić">
+  <meta property="article:published_time" content="{{date}}">
+  <meta property="article:author" content="Amer Alić">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@AmerAlicTweets">
+  <link rel="alternate" type="application/rss+xml" title="Amer Alić" href="https://ameralic.com/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titan+One&amp;display=swap" rel="stylesheet">
+  <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="public/site.css">
+  <script type="application/ld+json">{{jsonld}}</script>
+</head>
+<body data-section="writing">
+  <div class="wrap">
+    <div data-site-nav></div>
+
+    <article class="post">
+      <p class="post-meta">
+        <time datetime="{{date}}">{{dateLong}}</time>
+        <span>{{readTime}} min read</span>
+        <span>{{tag}}</span>
+      </p>
+      <h1 class="post-title">{{title}}</h1>
+
+      <div class="prose">
+{{body}}
+      </div>
+
+      <a href="Blog.html" class="back-link">&larr; All writing</a>
+    </article>
+
+    <div data-site-footer></div>
+  </div>
+
+  <script src="public/site.js"></script>
+</body>
+</html>

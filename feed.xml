@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Amer Alić</title>
+    <link>https://ameralic.com/</link>
+    <description>Essays on software, craft, work, and the age of AI.</description>
+    <language>en</language>
+    <atom:link href="https://ameralic.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>What Makes Work Valuable in the Age of AI?</title>
+      <link>https://ameralic.com/work-that-matters-in-the-age-of-ai.html</link>
+      <guid isPermaLink="true">https://ameralic.com/work-that-matters-in-the-age-of-ai.html</guid>
+      <pubDate>Wed, 22 Jul 2026 09:00:00 GMT</pubDate>
+      <description>As routine work becomes easier to automate, judgment, creativity, responsibility, and visible proof of skill matter more.</description>
+    </item>
+  </channel>
+</rss>
