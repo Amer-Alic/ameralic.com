@@ -35,14 +35,16 @@ if (existsSync(path)) {
   process.exit(1);
 }
 
+// A short post never gets a page on the site, so there is nothing to link to.
+// Only essays carry the URL.
+const link = short ? '' : `\nhttps://ameralic.com/${slug}.html\n`;
+
 const social = `<!--social
 x:
 [One claim, first line. No wind-up. Compress, don't summarise.]
 
 [Optional second beat.]
-
-https://ameralic.com/${slug}.html
-
+${link}
 ---
 linkedin:
 [Open with the correction or the concrete detail — the first two lines are all
@@ -51,9 +53,7 @@ that shows before "see more".]
 [Room to breathe here. Short paragraphs, single line breaks.]
 
 [Close by compressing the idea, not by asking a question.]
-
-https://ameralic.com/${slug}.html
--->
+${link}-->
 `;
 
 const essay = `---
