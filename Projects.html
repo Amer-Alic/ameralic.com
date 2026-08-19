@@ -18,6 +18,11 @@
     .exp li { grid-template-columns: 140px 1fr; }
     .exp__when { white-space: nowrap; }
     @media (max-width: 520px) { .exp li { grid-template-columns: 1fr; gap: 4px; } }
+    .teach { border: 1px solid var(--line); padding: 22px 24px; }
+    .teach__when { margin: 0 0 6px; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+    .teach__title { margin: 0 0 12px; font-size: 18px; font-weight: 500; }
+    .teach p { margin: 0; font-size: 15px; line-height: 1.6; }
+    .teach__link { margin-top: 14px !important; font-size: 14px !important; }
     .contact { color: var(--muted); font-size: 15px; margin-top: 28px; }
   </style>
 </head>
@@ -77,18 +82,28 @@
             </span>
           </li>
           <li>
-            <span class="exp__when">2023 &mdash; 2024</span>
-            <span class="exp__what"><a href="https://github.com/Amer-Alic/Programming-Education-2023">Programming education, INPUT Youth Center</a><br>
-              <span class="exp__role">A free web development course I taught in person in Zenica &mdash; 12 classes over three months. Registration fees went to Merhamet.</span>
-            </span>
-          </li>
-          <li>
             <span class="exp__when">2021 &mdash; 2025</span>
             <span class="exp__what">Freelance web development<br>
               <span class="exp__role">Marketing sites and custom code, mostly in Webflow, for clients across Europe.</span>
             </span>
           </li>
         </ul>
+      </section>
+      <section aria-labelledby="teaching-title">
+        <div class="section__head">
+          <h2 class="section__title" id="teaching-title">Teaching</h2>
+        </div>
+        <div class="teach">
+          <p class="teach__when">Nov 2023 &ndash; Jan 2024 &middot; Zenica</p>
+          <h3 class="teach__title">A web development course, taught in person</h3>
+          <p>
+            Twelve classes at the INPUT Youth Center, taking people from no programming
+            at all to building their own pages. It ran on two ideas: that the reason to
+            learn this here is so fewer people feel they have to leave, and that the
+            registration fees were not mine to keep &mdash; they went to Merhamet.
+          </p>
+          <p class="teach__link"><a href="https://github.com/Amer-Alic/Programming-Education-2023">Course materials and student projects &rarr;</a></p>
+        </div>
       </section>
 
       <section aria-labelledby="writing-title">
