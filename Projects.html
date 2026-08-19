@@ -3,40 +3,118 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projects &middot; Amer Alić</title>
-  <meta name="description" content="Selected public projects by Amer Alić.">
-  <link rel="canonical" href="https://ameralic.com/Projects.html">
+  <title>Work &middot; Amer Alić</title>
+  <meta name="description" content="What Amer Alić builds: engineering lead at Parallex, and selected work.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Titan+One&amp;display=swap" rel="stylesheet">
   <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="public/site.css">
+  <style>
+    .fill {
+      border-bottom: 1px dashed var(--muted);
+      color: var(--muted);
+    }
+    .exp li { grid-template-columns: 140px 1fr; }
+    .exp__when { white-space: nowrap; }
+    @media (max-width: 520px) { .exp li { grid-template-columns: 1fr; gap: 4px; } }
+    .contact { color: var(--muted); font-size: 15px; margin-top: 28px; }
+  </style>
 </head>
-<body>
+<body data-section="project">
   <div class="wrap">
     <div data-site-nav></div>
 
     <header class="page-header">
-      <h1>Projects</h1>
-      <p>A few public tools and experiments. More of my work lives behind client and company doors.</p>
+      <h1>Work</h1>
+      <p>What I spend my days on, and where you can see it.</p>
     </header>
 
     <main>
-      <section class="year-group">
-        <p class="year-group__label">Selected</p>
+      <section class="prose">
+        <p>
+          I lead the engineering team at <a href="https://getparallex.com">Parallex</a>,
+          where we are building the next generation of software for real estate &mdash;
+          connecting everyone involved from the moment a building starts going up to the
+          moment the last apartment is sold.
+        </p>
+      </section>
+
+      <section aria-labelledby="featured-title">
+        <div class="section__head">
+          <h2 class="section__title" id="featured-title">Featured</h2>
+        </div>
         <ul class="list">
           <li>
-            <span class="list__title"><a href="https://github.com/Amer-Alic/social-preview">Social Share Preview</a></span>
-            <span class="list__meta">TypeScript</span>
-            <p class="list__desc">A social-preview and Open Graph QA tool for Webflow CMS teams, with simulations for eight sharing platforms.</p>
+            <span class="list__title"><a href="https://alef.getparallex.com">Alef</a></span>
+            <span class="list__meta">alef.getparallex.com</span>
+            <p class="list__desc">
+              <span class="fill">One line: which developer, which city, how many units.</span>
+              Buyers explore the development in 3D, filter units by floor, view and price,
+              and reserve the one they want.
+            </p>
           </li>
           <li>
-            <span class="list__title"><a href="https://github.com/Amer-Alic/custom-webflow">Webflow Custom Code Library</a></span>
-            <span class="list__meta">JavaScript &middot; CSS</span>
-            <p class="list__desc">A growing collection of reusable snippets and utilities developed for real Webflow projects.</p>
+            <span class="list__title"><a href="https://citi.getparallex.com">Citi Developers</a></span>
+            <span class="list__meta">citi.getparallex.com</span>
+            <p class="list__desc">
+              <span class="fill">One line: which development, what makes it worth showing.</span>
+              Same platform, a different developer and a different building.
+            </p>
           </li>
         </ul>
       </section>
+
+      <section aria-labelledby="experience-title">
+        <div class="section__head">
+          <h2 class="section__title" id="experience-title">Experience</h2>
+        </div>
+        <ul class="exp">
+          <li>
+            <span class="exp__when">2025 &mdash; present</span>
+            <span class="exp__what">Parallex<br>
+              <span class="exp__role">Tech Lead. Engineering for the platform above.</span>
+            </span>
+          </li>
+          <li>
+            <span class="exp__when">2023 &mdash; 2024</span>
+            <span class="exp__what"><a href="https://github.com/Amer-Alic/Programming-Education-2023">Programming education, INPUT Youth Center</a><br>
+              <span class="exp__role">A free web development course I taught in person in Zenica &mdash; 12 classes over three months. Registration fees went to Merhamet.</span>
+            </span>
+          </li>
+          <li>
+            <span class="exp__when">2021 &mdash; 2025</span>
+            <span class="exp__what">Freelance web development<br>
+              <span class="exp__role">Marketing sites and custom code, mostly in Webflow, for clients across Europe.</span>
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="writing-title">
+        <div class="section__head">
+          <h2 class="section__title" id="writing-title">Featured writing</h2>
+          <span class="section__meta"><a href="Blog.html">All posts &rarr;</a></span>
+        </div>
+        <ul class="list">
+          <li>
+            <span class="list__title"><a href="work-that-matters-in-the-age-of-ai.html">What Makes Work Valuable in the Age of AI?</a></span>
+            <span class="list__meta">Jul 22, 2026</span>
+            <p class="list__desc">As routine work becomes easier to automate, judgment, creativity, responsibility, and visible proof of skill matter more.</p>
+          </li>
+          <!-- Preview only: still a draft in posts/. -->
+          <li>
+            <span class="list__title"><a href="Blog.html">A bad architecture decision cost me $10,000</a></span>
+            <span class="list__meta">Aug 7, 2026</span>
+            <p class="list__desc">The fork I got wrong, what it cost to unwind, and how I would decide it today.</p>
+          </li>
+        </ul>
+      </section>
+
+      <p class="contact">
+        Most of what I build lives behind client and company doors. If you want to talk
+        about any of it, <a href="mailto:amer@getparallex.com">amer@getparallex.com</a>.
+      </p>
     </main>
 
     <div data-site-footer></div>

@@ -16,8 +16,7 @@
   function navHTML() {
     var links = [
       { href: 'Blog.html', label: 'Writing', match: 'writing' },
-      { href: 'Projects.html', label: 'Projects', match: 'project' },
-      { href: 'About.html', label: 'About', match: 'about' }
+      { href: 'Projects.html', label: 'Work', match: 'project' }
     ];
     var items = links.map(function (l) {
       var current = isCurrent(l.match) ? ' aria-current="page"' : '';
