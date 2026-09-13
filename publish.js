@@ -11,6 +11,7 @@ import { readFileSync, writeFileSync, existsSync, appendFileSync, readdirSync, m
 import { execFileSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { writingGitHubEnv } from './automation/github.js';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const SITE = 'https://ameralic.com';
@@ -79,14 +80,14 @@ const title = (raw.match(/^title:\s*(.+)$/m) || [])[1]?.trim() ?? slug;
 const liveUrl = `${SITE}/${slug}.html`;
 
 if (source.kind === 'essay' && !DRY) {
-  const files = ['posts', 'Blog.html', 'sitemap.xml', 'feed.xml', `${slug}.html`]
+  const files = [source.path, 'index.html', 'Blog.html', 'sitemap.xml', 'feed.xml', `${slug}.html`]
     .filter((f) => existsSync(join(ROOT, f)));
   git('add', '--', ...files);
 
   const staged = git('diff', '--cached', '--name-only');
   if (staged) {
     git('commit', '-m', `Publish: ${title}`);
-    git('push');
+    execFileSync('git', ['push'], { cwd: ROOT, env: writingGitHubEnv(), stdio: 'inherit' });
     console.log(`\npushed. live in ~60s at ${liveUrl}`);
   } else {
     console.log('\nnothing to commit — site already up to date.');
